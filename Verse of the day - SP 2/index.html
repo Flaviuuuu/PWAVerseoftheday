@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Verse of the Day</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="script.js" type="text/javascript"></script>
+    <link rel="apple-touch-icon" sizes="57x57" href="icons/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="icons/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="icons/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="icons/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="icons/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="icons/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="icons/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="icons/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="icons/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="icons/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="icons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="icons/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="icons/favicon-16x16.png">
+    <link rel="manifest" href="icons/manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="icons/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+
+</head>
+
+<body>
+<div class="container">
+    <span style="position: absolute;font-family:cursive; line-height: 50px;  color: azure; width: 600px; margin-left:  30%; margin-top: 10%; font-size: 40px; "
+          id="scripture"></span>
+    <div>
+        <img id="image" src="michal-prucha-233892.jpg" width="1500" height="600">
+    </div>
+
+    <div class="footer">
+        <span style="font-family: cursive; font-size: 30px; margin-left: 45%;">Share the verse</span>
+        <hr>
+        <i class="fab fa-facebook-square" style="font-size: 50px; margin-left: 45%;"></i>
+        <i class="fab fa-pinterest" style="font-size: 50px;"></i>
+        <i class="fab fa-twitter" style="font-size: 50px"></i>
+        <i class="fab fa-instagram" style="font-size: 50px"></i>
+
+    </div>
+</div>
+
+
+</body>
+
+<! -- Service Worker registration -->
+<script type="text/javascript">
+    if (navigator.serviceWorker.controller) {
+        console.log('[PWA Builder] active service worker found, no need to register')
+    } else {
+        //Register the ServiceWorker
+        navigator.serviceWorker.register('pwabuilder-sw.js', {
+            scope: './'
+        }).then(function (reg) {
+            console.log('Service worker has been registered for scope:' + reg.scope);
+        });
+    }
+</script>
+
+</html>
